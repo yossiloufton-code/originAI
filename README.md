@@ -84,7 +84,10 @@ Run all tests in either backend or frontend:
 npm run test
 
 ## 🐳 Running with Docker
-docker compose up --build
+ - docker compose up --build
+
+### closing with docker:
+ - docker compose down -v   
 
 ## 🧾 Export Votes to CSV
 
