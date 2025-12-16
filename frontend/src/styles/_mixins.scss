@@ -1,0 +1,18 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* src/styles/_mixins.scss */
+@mixin container($max: 1280px) {
+  width: min(#{$max}, 100% - 32px);
+  margin-inline: auto;
+}
+
+@mixin focus-ring {
+  outline: none;
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.18),
+    0 0 0 1px rgba(37, 99, 235, 0.35);
+}

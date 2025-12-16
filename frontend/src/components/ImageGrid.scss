@@ -1,0 +1,8 @@
+@use "../styles/variables" as v;
+
+.image-grid {
+  display: grid;
+  gap: v.$gap;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  align-items: start;
+}

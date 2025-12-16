@@ -1,0 +1,104 @@
+@use "../styles/variables" as v;
+@use "../styles/mixins" as m;
+
+.image-card {
+  background: v.$card;
+  border: 1px solid v.$border;
+  border-radius: v.$radius;
+  overflow: hidden;
+  box-shadow: v.$shadow-sm;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: v.$shadow;
+    border-color: rgba(37, 99, 235, 0.25);
+  }
+
+  .image-card__img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: #e9eef8;
+  }
+}
+
+.image-card__body {
+  padding: 10px 12px 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.image-card__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.image-card__btn {
+  flex: 1;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: #fff;
+  color: v.$text;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    background 120ms ease,
+    border-color 120ms ease;
+
+  &:hover {
+    background: rgba(37, 99, 235, 0.06);
+    border-color: rgba(37, 99, 235, 0.35);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    @include m.focus-ring;
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  &--dislike:hover {
+    background: rgba(239, 68, 68, 0.06);
+    border-color: rgba(239, 68, 68, 0.38);
+  }
+}
+
+/* ✅ Better counts row */
+.image-card__meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  font-size: 13px;
+  color: v.$muted;
+}
+
+.image-card__pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  background: rgba(15, 23, 42, 0.03);
+
+  strong {
+    color: v.$text;
+    font-weight: 800;
+  }
+}

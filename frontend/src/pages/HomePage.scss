@@ -1,0 +1,52 @@
+@use "../styles/variables" as v;
+@use "../styles/mixins" as m;
+
+.page {
+  @include m.container(1320px);
+  padding: 18px 0 40px;
+}
+
+.page__header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  padding: 14px 0 14px;
+  margin-bottom: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  background: linear-gradient(to bottom, v.$bg 70%, rgba(246, 247, 251, 0));
+}
+
+.page__title {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+}
+
+.page__export {
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: #fff;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(37, 99, 235, 0.06);
+    border-color: rgba(37, 99, 235, 0.35);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    @include m.focus-ring;
+  }
+}
