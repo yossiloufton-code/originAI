@@ -5,7 +5,7 @@
 A React + Vite application that displays random images and allows users to vote **Like / Dislike** on each image.  
 Votes are tracked in application state and can be exported to CSV.
 
-The project demonstrates clean component design, global state via React Context, testing with Vitest + Testing Library, SCSS styling, and Dockerized production build with Nginx.
+The project demonstrates clean component design, global state via React Context, testing with Vitest + Testing Library, SCSS styling, and Dockerized production build.
 
 ---
 
@@ -39,8 +39,7 @@ The project demonstrates clean component design, global state via React Context,
 
 **Production**
 - Docker
-- Nginx
-
+  
 ---
 
 ## 📁 Project Structure
