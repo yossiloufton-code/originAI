@@ -86,6 +86,39 @@ npm run test
 ## 🐳 Running with Docker
 docker compose up --build
 
+## 🧾 Export Votes to CSV
+
+ - Click the “Export votes to CSV” button in the header to download a CSV file containing:
+
+ - Image ID
+
+ - Number of likes
+
+ - Number of dislikes
+
+## ♿ Accessibility
+
+ - Semantic HTML elements
+
+ - Accessible buttons with clear labels
+
+ - Keyboard navigation support
+
+ - Focus-visible styles
+
+ - Screen-reader friendly content
+
+## 🧠 Design Notes
+
+ - Client-side state managed via React Context
+
+ - Voting state prevents duplicate actions while processing
+
+ - Modular SCSS architecture
+
+ - Responsive grid using CSS Grid
+
+ - Easily extendable to a backend-based architecture
 
 ### Extras:
 used postgres locally as a db, need to precreate a db named picsvoter, and added all .env files for convenience.
